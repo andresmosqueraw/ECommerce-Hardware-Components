@@ -8,6 +8,7 @@ import { CartService } from './services/cart.service';
 })
 export class AppComponent implements OnInit {
   cart: Cart = { items: [] };
+  isAuthenticated: boolean = false; // Añadido para controlar la autenticación
 
   constructor(private cartService: CartService) {}
 
@@ -15,5 +16,13 @@ export class AppComponent implements OnInit {
     this.cartService.cart.subscribe((_cart) => {
       this.cart = _cart;
     });
+
+    this.checkAuthentication();
+  }
+
+  checkAuthentication() {
+    // Verificar si el usuario está autenticado al cargar la app
+    const user = localStorage.getItem('loggedUser');
+    this.isAuthenticated = !!user; // Esto será true si 'loggedUser' existe, false de lo contrario
   }
 }

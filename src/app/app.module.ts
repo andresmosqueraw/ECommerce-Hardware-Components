@@ -28,6 +28,8 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CartService } from './services/cart.service';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreService } from './services/store.service';
+import { LoginComponent } from './pages/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { StoreService } from './services/store.service';
     FiltersComponent,
     HeaderComponent,
     CartComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import { StoreService } from './services/store.service';
     MatBadgeModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
+    FormsModule,
     HttpClientModule,
   ],
   providers: [CartService, StoreService],
