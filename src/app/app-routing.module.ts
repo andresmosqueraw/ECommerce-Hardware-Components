@@ -3,11 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './pages/cart/cart.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ComponentsModule } from './pages/home/components/components.module';
+import { FiltersComponent } from './pages/home/components/filters/filters.component';
 
 const routes: Routes = [
+  { path: '',
+  redirectTo: '/login',
+  pathMatch: 'full'
+  },
+  {
+    path: 'filters',
+    component:FiltersComponent
+  },
+
   {
     path: 'login',
-    component: LoginComponent,  
+    component: LoginComponent,
   },
   {
     path: 'home',
@@ -16,8 +27,7 @@ const routes: Routes = [
   {
     path: 'cart',
     component: CartComponent,
-  },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  }
 ];
 
 @NgModule({

@@ -20,9 +20,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { ProductsHeaderComponent } from './pages/home/components/products-header/products-header.component';
-import { ProductBoxComponent } from './pages/home/components/product-box/product-box.component';
-import { FiltersComponent } from './pages/home/components/filters/filters.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CartService } from './services/cart.service';
@@ -30,14 +27,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreService } from './services/store.service';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from './pages/home/components/components.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductsHeaderComponent,
-    ProductBoxComponent,
-    FiltersComponent,
     HeaderComponent,
     CartComponent,
     LoginComponent,
@@ -45,6 +40,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ComponentsModule,
     MatSidenavModule,
     MatGridListModule,
     MatMenuModule,
