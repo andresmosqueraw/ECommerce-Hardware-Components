@@ -1,0 +1,16 @@
+.git
+
+.editorconfig
+
+.gitattributes
+
+.gitignore
+
+.vscode
+
+/docs
+
+*.md
+
+
+
